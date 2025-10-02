@@ -46,7 +46,7 @@ export default function Navigation() {
           {/* Logo */}
           <motion.a
             href="#"
-            className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent font-space-grotesk"
+            className="text-xl font-bold text-gradient font-display"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >

@@ -1,21 +1,31 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { cloudflare } from "@cloudflare/vite-plugin";
-import { mochaPlugins } from "@getmocha/vite-plugins";
 
 export default defineConfig({
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  plugins: [...mochaPlugins(process.env as any), react(), cloudflare()],
+  plugins: [react()],
   server: {
-    allowedHosts: true,
+    host: true,
+    port: 3000,
   },
   build: {
-    chunkSizeWarningLimit: 5000,
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          three: ['three', '@react-three/fiber', '@react-three/drei'],
+          motion: ['framer-motion']
+        }
+      }
+    }
   },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['three', '@react-three/fiber', '@react-three/drei']
+  }
 });

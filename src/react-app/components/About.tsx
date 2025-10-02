@@ -76,7 +76,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-6 font-space-grotesk">
+          <h2 className="text-5xl md:text-6xl font-bold text-gradient mb-6 font-display">
             About Me
           </h2>
           <div className="max-w-4xl mx-auto space-y-6 text-lg text-slate-300 leading-relaxed">

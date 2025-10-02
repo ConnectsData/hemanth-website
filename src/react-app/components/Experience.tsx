@@ -131,7 +131,7 @@ export default function Experience() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-6 font-space-grotesk">
+          <h2 className="text-5xl md:text-6xl font-bold text-gradient mb-6 font-display">
             Experience
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
